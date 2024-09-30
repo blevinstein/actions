@@ -1,0 +1,14 @@
+
+name: Test Workflow
+
+on:
+  push:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: blevinstein/actions/test-action@v1
+        with:
+          val-a: Alpha
+          val-b: Bravo

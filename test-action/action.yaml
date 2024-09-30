@@ -1,0 +1,18 @@
+
+name: Something
+
+inputs:
+  val-a:
+    default: 'a'
+  val-b:
+    default: 'b'
+
+runs:
+  using: 'composite'
+  steps:
+    - name: 'Echo A'
+      shell: bash
+      run: 'echo A is ${{ inputs.val-a }}'
+    - name: 'Echo B'
+      shell: bash
+      run: 'echo B is ${{ inputs.val-b }}'
